@@ -47,13 +47,9 @@ public class wave {
         }
         int heightWawe = arr[iMinNumWave][jMinNumWave];
         arr[iMinNumWave][jMinNumWave] = -2;
-        if (heightWawe > 1)
-        // if (((arr[iMinNumWave-1][jMinNumWave] != 0) && (iMinNumWave-1 >= 0))
-        // && ((arr[iMinNumWave][jMinNumWave+1] != 0) && (jMinNumWave+1 < rowLength))
-        // && ((arr[iMinNumWave+1][jMinNumWave] != 0) && (iMinNumWave+1 < collLength))
-        // && ((arr[iMinNumWave][jMinNumWave-1] != 0) && (jMinNumWave-1 >= 0)))
-        doPath(arr, iMinNumWave, jMinNumWave);
-        // System.out.println("координаты точки пути" + iMinNumWave + " " + jMinNumWave);
+        System.out.println("координаты точки пути " + iMinNumWave + " " + jMinNumWave);
+        if (heightWawe > 1) doPath(arr, iMinNumWave, jMinNumWave);
+        // System.out.println("координаты точки пути " + iMinNumWave + " " + jMinNumWave);
         
  
     }
@@ -68,7 +64,7 @@ public class wave {
 
     public static void main(String args[]) {
         // 0 - начальная точка, -1 - свободно для построения пути, -2 - конечная точка и путь, -3 - преграда
-        int field[][] = {{-1,-1,-1,-3,-1,-1},{-1,-1,-1,-3,-1,-1},{-1,-1,-1,-1,-1,-1},{-1,-3,-1,-1,-1,-1},{0,-3,-1,-1,-1,-1}};
+        int field[][] = {{-1,-1,-1,-3,-1,-1},{-1,-1,-1,-3,-1,-1},{-1,-1,-1,-3,-1,-1},{-1,-3,-1,-1,-1,-1},{0,-3,-1,-1,-1,-1}};
         int iEndPoint = 1;
         int jEndPoint = 4;
         field[iEndPoint][jEndPoint] = -2; // -2 конечноая точка и путь от нё до начальной 0
