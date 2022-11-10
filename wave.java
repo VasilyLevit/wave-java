@@ -45,13 +45,15 @@ public class wave {
             iMinNumWave = iEndPath;
             jMinNumWave = jEndPath-1;
         }
+        int heightWawe = arr[iMinNumWave][jMinNumWave];
         arr[iMinNumWave][jMinNumWave] = -2;
+        if (heightWawe > 1)
         // if (((arr[iMinNumWave-1][jMinNumWave] != 0) && (iMinNumWave-1 >= 0))
         // && ((arr[iMinNumWave][jMinNumWave+1] != 0) && (jMinNumWave+1 < rowLength))
         // && ((arr[iMinNumWave+1][jMinNumWave] != 0) && (iMinNumWave+1 < collLength))
         // && ((arr[iMinNumWave][jMinNumWave-1] != 0) && (jMinNumWave-1 >= 0)))
-        // doPath(arr, iMinNumWave, jMinNumWave);
-        System.out.println("координаты точки пути" + iMinNumWave + " " + jMinNumWave);
+        doPath(arr, iMinNumWave, jMinNumWave);
+        // System.out.println("координаты точки пути" + iMinNumWave + " " + jMinNumWave);
         
  
     }
