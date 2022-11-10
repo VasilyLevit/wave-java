@@ -56,7 +56,8 @@ public class wave {
     static void prnTwoDemArray(int arr[][]) {
         for (int i=0; i<arr.length; i++) {
             for (int j=0; j<arr[0].length; j++)
-                System.out.print(" " + arr[i][j] + " ");
+                System.out.printf("%2d  ", arr[i][j]);
+                // System.out.print(" " + arr[i][j] + " ");
             System.out.println();
         }
         System.out.println();
@@ -64,9 +65,9 @@ public class wave {
 
     public static void main(String args[]) {
         // 0 - начальная точка, -1 - свободно для построения пути, -2 - конечная точка и путь, -3 - преграда
-        int field[][] = {{-1,-1,-1,-3,-1,-1},{-1,-1,-1,-3,-1,-1},{-1,-1,-1,-3,-1,-1},{-1,-3,-1,-1,-1,-1},{0,-3,-1,-1,-1,-1}};
+        int field[][] = {{-1,-1,-1,-1,-3,-1,-1},{-1,-1,-1,-1,-3,-1,-1},{-1,-1,-1,-1,-3,-1,-1},{-1,-1,-3,-1,-1,-1,-1},{-1,0,-3,-1,-1,-1,-1}};
         int iEndPoint = 1;
-        int jEndPoint = 4;
+        int jEndPoint = 5;
         field[iEndPoint][jEndPoint] = -2; // -2 конечноая точка и путь от нё до начальной 0
         System.out.println("Исходное поле, где: 0 - начальная точка, -1 - свободно для построения пути, -2 - конечная точка и путь, -3 - преграда"); 
         prnTwoDemArray(field);
