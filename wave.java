@@ -66,10 +66,13 @@ public class wave {
         int iEndPoint = 1;
         int jEndPoint = 4;
         field[iEndPoint][jEndPoint] = -2; // -2 конечноая точка и путь от нё до начальной 0
+        System.out.println("Исходное поле, где: 0 - начальная точка, -1 - свободно для построения пути, -2 - конечная точка и путь, -3 - преграда"); 
         prnTwoDemArray(field);
         wave object = new wave();
+        System.out.println("Построение волны");
         object.doWave(field);
         prnTwoDemArray(field);
+        System.out.println("Построение пути");
         object.doPath(field, iEndPoint, jEndPoint);
         prnTwoDemArray(field);
     }
