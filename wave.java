@@ -32,14 +32,17 @@ public class wave {
         }
         if((jEndPath+1 < rowLength) && (arr[iEndPath][jEndPath+1] < minNumWave) && (arr[iEndPath][jEndPath+1] > 0)) {
             minNumWave = arr[iEndPath][jEndPath+1]; // rigth
+            iMinNumWave = iEndPath;
             jMinNumWave = jEndPath+1;              
         }
         if((iEndPath+1 < collLength) && (arr[iEndPath+1][jEndPath] < minNumWave) && (arr[iEndPath][jEndPath+1] > 0)) {
             minNumWave = arr[iEndPath+1][jEndPath]; // down
             iMinNumWave = iEndPath+1;
+            jMinNumWave = jEndPath;
         }
         if((jEndPath-1 >= 0) && (arr[iEndPath][jEndPath-1] < minNumWave) && (arr[iEndPath][jEndPath-1] > 0)) {
             minNumWave = arr[iEndPath][jEndPath-1]; // left
+            iMinNumWave = iEndPath;
             jMinNumWave = jEndPath-1;
         }
         arr[iMinNumWave][jMinNumWave] = -2;
@@ -48,6 +51,7 @@ public class wave {
         // && ((arr[iMinNumWave+1][jMinNumWave] != 0) && (iMinNumWave+1 < collLength))
         // && ((arr[iMinNumWave][jMinNumWave-1] != 0) && (jMinNumWave-1 >= 0)))
         // doPath(arr, iMinNumWave, jMinNumWave);
+        System.out.println("координаты точки пути" + iMinNumWave + " " + jMinNumWave);
         
  
     }
